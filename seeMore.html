@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+
+    </div>
+    <a href="./index.html" class="home">Home</a>
+
+    <script>
+        let div = document.querySelector(".container");
+
+
+
+        const data = localStorage.getItem("id");
+        console.log(data)
+
+        fetch(`https://dummyjson.com/products/${data}`)
+            .then((res) => {
+                return res.json()
+            })
+            .then((res) => {
+                div.innerHTML = `<div class="card">
+                <img src="${res.thumbnail}"></img>
+                <h3>${res.id}</h3>
+                <h1>${res.title}</h1>
+                <h3>Category: ${res.category}</h3>
+                <h3>Price: ${res.price}</h3>
+                <p>${res.description}</p>
+                <h4>${res.warrantyInformation}</h4>
+            </div>
+            `
+            })
+            .catch((error) => {
+                console.log(error)
+            })
+    </script>
+</body>
+
+</html>

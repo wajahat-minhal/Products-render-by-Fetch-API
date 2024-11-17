@@ -1,0 +1,49 @@
+body {
+    background-color: grey
+}
+
+.h1 {
+    text-align: center;
+}
+
+.see-more {
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: red;
+}
+
+.card {
+    background-color: azure;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 20vw;
+    /* height: 30vh; */
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+.container {
+    border-radius: 20px;
+    background-color: black;
+    width: 70vw;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.home {
+    text-decoration: none;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-weight: bold;
+    margin-top: 10px;
+}
